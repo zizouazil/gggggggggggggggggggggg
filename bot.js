@@ -36,6 +36,7 @@ var now_playing = [];
 \\\\\\\\\\\\\\\\\\\\\\\\/////////////////////////
 */
 client.on('ready', () => {});
+  client.user.setActivity(".Anime Time", {type: 'WATCHING'})
 console.log("Logged")
 var download = function(uri, filename, callback) {
 	request.head(uri, function(err, res, body) {

@@ -11,8 +11,12 @@ const prefix = '1';
 client.on('ready', function() {
 	console.log(`i am ready ${client.user.username}`);
 });
+		  
 
+ client.on('ready', () => {
+		  client.user.setActivity('Test', {type: 'WATCHING'});
 
+});
 /*
 ////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
 ////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -36,7 +40,6 @@ var now_playing = [];
 \\\\\\\\\\\\\\\\\\\\\\\\/////////////////////////
 */
 client.on('ready', () => {});
-  client.user.setActivity(".Anime Time", {type: 'WATCHING'})
 console.log("Logged")
 var download = function(uri, filename, callback) {
 	request.head(uri, function(err, res, body) {
@@ -48,6 +51,7 @@ var download = function(uri, filename, callback) {
 };
 
 client.on('message', function(message) {
+
 	const member = message.member;
 	const mess = message.content.toLowerCase();
 	const args = message.content.split(' ').slice(1).join(' ');
@@ -257,88 +261,6 @@ const adminprefix = "$viippp";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 	}
 	
 	});
-	
-	var user = {};
-var warn = {};
 
-var user = {};
-var warn = {};
-
-client.on('message', function(message) {
-
-    	 if (!message.channel.guild) return;
-let muteRole1 = message.guild.roles.find("name", "Muted");
-     if (!muteRole1) return;
-
-  if (message.author.id == client.user.id) return;
-  if(JSON.stringify(user).indexOf(message.author.id) == -1) {
-    user[message.author.id] = message.createdTimestamp;
-    return;
-  } else {
-    if (Date.now() - user[message.author.id] < 695){
-              message.author.delete
-
-      if (JSON.stringify(warn).indexOf(message.author.id) == -1) {
-        warn[message.author.id] = 1;
-      } else {
-        warn[message.author.id]++;
-        message.author.delete
-      }
-      if (warn[message.author.id] < 4) {
-        message.author.delete
-
-      }
-      delete user[message.author.id];
-              message.author.delete
-
-    } else {
-      delete user[message.author.id];
-              message.author.delete
-
-    }
-  }
-  if (warn[message.author.id] == 4) {		   
-     if (!message.channel.guild) return;
-             message.author.delete
-
-let muteRole1 = message.guild.roles.find("name", "Muted");
-     if (!muteRole1) return;
-    var guild = message.channel.guild;
-          var currentTime = new Date(),
-                   Year = currentTime.getFullYear(),
-            Month = currentTime.getMonth() + 1,
-            Day = currentTime.getDate(),
-hours = currentTime.getHours() + 3 ,
-            minutes = currentTime.getMinutes()+1,
-            seconds = currentTime.getSeconds();
-
-           if (!message.channel.guild) return;
-     if (!muteRole1) return;
-    var guild = message.channel.guild;
-    message.guild.members.get(message.author.id).addRole(muteRole1);
-    
-     var msg;
-        msg = parseInt();
-      
-      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
-
-delete warn[message.author.id];
-    delete user[message.author.id];
-	const embed500 = new Discord.RichEmbed()
-     .setTitle(`المرسل ${message.author.username}#${message.author.discriminator} `)
-      .setDescription(":white_check_mark:  | `محاولة السبام`\n\nالاسم:\n"+`${message.author.username}#${message.author.discriminator}`+"\nالعقوبة:\nميوت شات\n")
-          .setFooter("KiNg66S")
-      .setColor("c91616")
-    message.channel.send(embed500)
-    	const embed20 = new Discord.RichEmbed()
-      .setTitle(":scales: | تمت معاقبتك")
-      .setDescription(`**لقد قمت بمخالفة قوانين السيرفر**\n\nتمت معاقبتك من قبل :\n.Anime Time\nنوع العقوبة:\nميوت شات\nتاريخ العقوبة:\n`+ Year + "/" + Month + "/" + Day +', '+hours +'-' +minutes+'-'+seconds+"\n \n \n`في حال كانت العقوبة بالغلط, تواصل مع الادارة`")
-          .setFooter("KiNg66S")
-      .setColor("c91616")
-    
-     message.author.send(embed20)
-  
-  }
-});
 
 client.login(process.env.BOT_TOKEN); 

@@ -14,7 +14,7 @@ client.on('ready', function() {
 		  
 
  client.on('ready', () => {
-		  client.user.setActivity('Test', {type: 'WATCHING'});
+		  client.user.setActivity('.Anime Time', {type: 'WATCHING'});
 
 });
 /*

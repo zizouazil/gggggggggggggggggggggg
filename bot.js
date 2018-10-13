@@ -14,7 +14,7 @@ client.on('ready', function() {
 		  
 
  client.on('ready', () => {
-		  client.user.setActivity('You Bitch', {type: 'WATCHING'});
+		  client.user.setActivity('You Bitch |$play', {type: 'WATCHING'});
 
 });
 /*

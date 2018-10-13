@@ -7,14 +7,14 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 const YouTube = require('simple-youtube-api');
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '1';
+const prefix = '9';
 client.on('ready', function() {
 	console.log(`i am ready ${client.user.username}`);
 });
 		  
 
  client.on('ready', () => {
-		  client.user.setActivity('.Anime Time', {type: 'WATCHING'});
+		  client.user.setActivity('You Bitch', {type: 'WATCHING'});
 
 });
 /*
